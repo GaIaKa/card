@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaya Karapetyan — Atmospheric Physics</title>
+    <!-- Google Fonts for New York Times / Editorial look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FBF9F5; /* Warm archival paper tone */
+            --text-color: #111111; /* Deep charcoal ink */
+            --accent-color: #1D5B9B; /* Royal blue atmospheric accent */
+            --border-color: #D3CEBE;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 24px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Magazine Masthead Header */
+        .masthead {
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+        }
+
+        .publication-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-color);
+            margin: 0;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 36px;
+            text-align: left;
+            color: #222;
+            border-left: 2px solid var(--accent-color);
+            padding-left: 16px;
+        }
+
+        .bio-section em {
+            font-style: italic;
+        }
+
+        /* Navigation / Action Buttons */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+            padding: 14px 20px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        .btn.primary {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        .btn.primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn span.arrow {
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        /* Contact Details Footer */
+        .footer-info {
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            font-size: 0.75rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .footer-info a {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+
+        .edition-date {
+            margin-top: 20px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Magazine Masthead -->
+        <header class="masthead">
+            <div class="publication-title">The Atmospheric Dispatch</div>
+            <h1>Gaya Karapetyan</h1>
+            <p class="subtitle">PhD Candidate · Atmospheric Physics</p>
+        </header>
+
+        <!-- Editorial Bio -->
+        <section class="bio-section">
+            Specializing in atmospheric electricity, electric field anomalies, and <em>Thunderstorm Ground Enhancements (TGE)</em>. Investigating Magdeburg potential gradient dynamics and terminating lightning structures.
+        </section>
+
+        <!-- Interactive Action Buttons -->
+        <nav class="button-group">
+            <a href="#contact" class="btn primary" onclick="saveContact(); return false;">
+                <span>Save Contact Card</span>
+                <span class="arrow">↓</span>
+            </a>
+            <a href="https://gaiaka.github.io" target="_blank" class="btn">
+                <span>View Full Portfolio & Blog</span>
+                <span class="arrow">↗</span>
+            </a>
+            <a href="https://www.researchgate.net" target="_blank" class="btn">
+                <span>ResearchGate Publications</span>
+                <span class="arrow">↗</span>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn">
+                <span>LinkedIn Professional Profile</span>
+                <span class="arrow">↗</span>
+            </a>
+        </nav>
+
+        <!-- Footer / Contacts -->
+        <footer class="footer-info" id="contact">
+            <div>Email: <a href="mailto:gayakarapetyan@email.com">gayakarapetyan@email.com</a></div>
+            <div>Location: Magdeburg, Germany</div>
+            <div class="edition-date">Digital Edition · Vol. 2026</div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple function to download a .vcf contact card directly to the visitor's phone
+        function saveContact() {
+            const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:Gaya Karapetyan\nTITLE:PhD Candidate in Atmospheric Physics\nEMAIL:gayakarapetyan@email.com\nURL:https://gayakarapetyan.github.io\nEND:VCARD";
+            const blob = new Blob([vcard], { type: "text/vcard" });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Gaya_Karapetyan.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
